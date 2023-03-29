@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group_Project"
         tools:targetApi="31">
+        <activity android:name="algonquin.cst2335.group_project.kitten.KittenActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.nasa.NasaActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.nytimes.NYTimesActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.weather.WeatherActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
