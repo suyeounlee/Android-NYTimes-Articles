@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,32 +11,55 @@
 
     <Button
         android:id="@+id/nasa_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#0D00CC"
         android:text="NASA MARS"
-        android:backgroundTint="#0D00CC" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/kitten_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="30dp"
+        android:backgroundTint="#BC9300"
         android:text="Kitten"
-        android:backgroundTint="#BC9300"/>
+        app:layout_constraintBottom_toBottomOf="@+id/nasa_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nasa_app"
+        app:layout_constraintTop_toTopOf="@+id/nasa_app" />
 
     <Button
         android:id="@+id/nytime_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#1AAA00"
         android:text="New York Times"
-        android:backgroundTint="#1AAA00"/>
+        app:layout_constraintStart_toStartOf="@+id/nasa_app"
+        app:layout_constraintTop_toBottomOf="@+id/nasa_app" />
 
     <Button
         android:id="@+id/weather_app"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#BD0000"
+        android:text="Weather"
+        app:layout_constraintStart_toStartOf="@+id/kitten_app"
+        app:layout_constraintTop_toBottomOf="@+id/kitten_app" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Weather"
-        android:backgroundTint="#BD0000"/>
-</LinearLayout>
+        android:layout_marginTop="60dp"
+        android:text="Group Project"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
