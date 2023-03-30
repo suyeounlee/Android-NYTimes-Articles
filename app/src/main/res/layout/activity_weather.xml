@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MainActivity"
-            android:background="@drawable/sky_background"
+            android:background="@drawable/weather_sky_background"
             >
 
             <androidx.appcompat.widget.Toolbar

@@ -37,6 +37,11 @@ import algonquin.cst2335.group_project.R;
 import algonquin.cst2335.group_project.databinding.ActivityWeatherBinding;
 import algonquin.cst2335.group_project.databinding.WeatherSearchHistoryBinding;
 
+/**
+ * WeatherActivity is the main class responsible for managing the weather information search and
+ * display, as well as handling user interactions related to weather data.
+ * @author Shing Kwan Chow
+ */
 public class WeatherActivity extends AppCompatActivity {
     ActivityWeatherBinding binding;
     WeatherViewModel weatherModel;
@@ -45,6 +50,11 @@ public class WeatherActivity extends AppCompatActivity {
     private RecyclerView.Adapter myAdapter;
     protected RequestQueue queue = null;
 
+    /**
+     * This method inflates the weather menu to the toolbar.
+     * @param menu The options menu in which the items are placed.
+     * @return Returns true to display the menu.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -52,6 +62,11 @@ public class WeatherActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * This method handles the selected menu item actions.
+     * @param item The menu item that was selected.
+     * @return Returns true if the menu item action was successfully handled.
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -74,6 +89,10 @@ public class WeatherActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * This method saves the last searched city to the SharedPreferences.
+     * @param cityName The name of the city to be saved.
+     */
     private void saveLastSearchedCity(String cityName) {
         SharedPreferences sharedPreferences = getSharedPreferences("last_searched_city", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -81,32 +100,44 @@ public class WeatherActivity extends AppCompatActivity {
         editor.apply();
     }
 
+    /**
+     * This method loads the last searched city from the SharedPreferences.
+     * @return Returns the last searched city's name or an empty string if not found.
+     */
     private String loadLastSearchedCity() {
         SharedPreferences sharedPreferences = getSharedPreferences("last_searched_city", MODE_PRIVATE);
         return sharedPreferences.getString("city", "");
     }
 
+    /**
+     * This method sets the appropriate weather icon based on the given description.
+     * @param description The weather description to determine the appropriate icon.
+     */
     private void getWeatherIcon(String description){
         description = description.toLowerCase();
         if(description.contains("sunny")){
-            binding.imageView.setImageResource(R.drawable.sunny);
+            binding.imageView.setImageResource(R.drawable.weather_sunny);
         }else if(description.contains("cloud")){
-            binding.imageView.setImageResource(R.drawable.cloudy);
+            binding.imageView.setImageResource(R.drawable.weather_cloudy);
         }else if(description.contains("overcast")){
-            binding.imageView.setImageResource(R.drawable.cloudy);
+            binding.imageView.setImageResource(R.drawable.weather_cloudy);
         }else if(description.contains("wind")){
-            binding.imageView.setImageResource(R.drawable.windy);
+            binding.imageView.setImageResource(R.drawable.weather_windy);
         }else if(description.contains("mist")){
-            binding.imageView.setImageResource(R.drawable.mist);
+            binding.imageView.setImageResource(R.drawable.weather_mist);
         }else if(description.contains("clear")){
-            binding.imageView.setImageResource(R.drawable.clear);
+            binding.imageView.setImageResource(R.drawable.weather_clear);
         }else if(description.contains("snow")){
-            binding.imageView.setImageResource(R.drawable.snow);
+            binding.imageView.setImageResource(R.drawable.weather_snow);
         }else{
-            binding.imageView.setImageResource(R.drawable.unknown);
+            binding.imageView.setImageResource(R.drawable.weather_unknown);
         }
     }
 
+    /**
+     * This method fetches weather data for the given city using the Weatherstack API.
+     * @param cityName The name of the city for which to fetch the weather data.
+     */
     private void fetchWeatherData(String cityName) {
 
         String apiKey = "749a132a1ed8ac34586506dd92981ed8";
@@ -144,6 +175,11 @@ public class WeatherActivity extends AppCompatActivity {
         queue.add(jsonObjectRequest);
     }
 
+    /**
+     * The main method for the WeatherActivity class. Initializes the view, sets up the RecyclerView,
+     * and handles button clicks.
+     * @param savedInstanceState A bundle containing the activity's previously saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -151,6 +187,7 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         weatherModel = new ViewModelProvider(this).get(WeatherViewModel.class);
         messages = weatherModel.messages.getValue();
+        // create database
         WeatherDatabase db = Room.databaseBuilder(getApplicationContext(), WeatherDatabase.class, "WeatherMessage").build();
         mDAO = db.cmDAO();
 
@@ -167,6 +204,7 @@ public class WeatherActivity extends AppCompatActivity {
             });
         }
 
+        // when user click "Search" button, call fetchWeatherData() to get weather info
         binding.searchCityButton.setOnClickListener(clk->{
             String cityName = binding.textInput.getText().toString();
             if (!cityName.isEmpty()) {
@@ -177,9 +215,10 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
 
+        // when user click "Save Search Result" button, save it to the database
         binding.saveCityButton.setOnClickListener(clk->{
             if(binding.cityName.getText().toString().equals("")){
-                Toast.makeText(getApplicationContext(), "Please input a city name!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Please search a city name first!", Toast.LENGTH_LONG).show();
             }else{
                 String humidityText = binding.humidity.getText().toString();
                 String humidityNumber = humidityText.replace("Humidity: ", "").replace("%", "").trim();
@@ -199,16 +238,16 @@ public class WeatherActivity extends AppCompatActivity {
                 });
                 Toast.makeText(getApplicationContext(), "Weather info saved", Toast.LENGTH_LONG).show();
             }
-
         });
 
+        // RecyclerView Holder for holding the saved results
         class MyRowHolder extends RecyclerView.ViewHolder {
             TextView cityViewHolder;
             TextView timeViewHolder;
 
             public MyRowHolder(@NonNull View itemView) {
                 super(itemView);
-
+                // when a RecyclerView item is clicked, prompt user option for deleting or loading the message
                 itemView.setOnClickListener(clk->{
                     int position = getAdapterPosition();
                     AlertDialog.Builder builder = new AlertDialog.Builder( WeatherActivity.this );
@@ -266,6 +305,7 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
 
+        // observe a selected event and call the fragment activity
         weatherModel.selectedMessage.observe(this, (newMessageValue) -> {
             FragmentManager fMgr = getSupportFragmentManager();
             FragmentTransaction tx = fMgr.beginTransaction();
