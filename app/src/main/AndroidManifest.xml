@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
 
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> ad0713910b88080298dfbbb051110d5b89edc97d
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +17,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group_Project"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+<<<<<<< HEAD
+=======
+        <activity android:name="algonquin.cst2335.group_project.kitten.KittenActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.nasa.NasaActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.nytimes.NYTimesActivity"></activity>
+        <activity android:name="algonquin.cst2335.group_project.weather.WeatherActivity"></activity>
+
+>>>>>>> ad0713910b88080298dfbbb051110d5b89edc97d
 
         <activity
             android:name="NewYorkTimes.NewYorkSecond"
