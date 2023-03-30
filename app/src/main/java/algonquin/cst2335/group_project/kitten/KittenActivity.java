@@ -9,7 +9,7 @@ import algonquin.cst2335.group_project.R;
 public class KittenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kitten_layout);
+        setContentView(R.layout.activity_kitten);
 
     }
 }

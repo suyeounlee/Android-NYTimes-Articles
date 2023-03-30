@@ -13,6 +13,7 @@ import algonquin.cst2335.group_project.nasa.NasaActivity;
 import algonquin.cst2335.group_project.nytimes.NYTimesActivity;
 import algonquin.cst2335.group_project.weather.WeatherActivity;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

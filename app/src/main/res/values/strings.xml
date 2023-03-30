@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Group_Project</string>
+    <string name="weather_title">Weather App</string>
+    <string name="weather_city_search">Search</string>
+    <string name="weather_save">Save Search Record</string>
+
 </resources>
