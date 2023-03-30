@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">グループ企画</string>
+    <string name="weather_city_search">都市を検索</string>
+    <string name="weather_save">結果を保存</string>
+    <string name="weather_title">気象情報</string>
+</resources>

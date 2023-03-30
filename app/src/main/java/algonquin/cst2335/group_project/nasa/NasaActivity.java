@@ -9,7 +9,7 @@ import algonquin.cst2335.group_project.R;
 public class NasaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nasa_layout);
+        setContentView(R.layout.activity_nasa);
 
     }
 }

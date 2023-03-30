@@ -9,7 +9,7 @@ import algonquin.cst2335.group_project.R;
 public class NYTimesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nytimes_layout);
+        setContentView(R.layout.activity_nytimes);
 
     }
 
