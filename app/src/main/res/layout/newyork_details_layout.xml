@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/pub_date_fg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="pub_date goes here"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/section_name_fg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/section_name_fg"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="section_name goes here"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/headline_fg"
+        app:layout_constraintTop_toBottomOf="@+id/pub_date_fg" />
+
+    <TextView
+        android:id="@+id/headline_fg"
+        android:layout_width="345dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:text="headline goes here"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/url_fg"
+        app:layout_constraintTop_toBottomOf="@+id/section_name_fg" />
+
+    <TextView
+        android:id="@+id/url_fg"
+        android:layout_width="349dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="url goes here"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headline_fg" />
+
+    <TextView
+        android:id="@+id/snippet_fg"
+        android:layout_width="347dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="160dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text="snippet goes here"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/url_fg"
+        app:layout_constraintTop_toBottomOf="@+id/headline_fg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

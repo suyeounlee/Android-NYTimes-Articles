@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyecto en groupo</string>
+    <string name="nyt_title">New York Times App</string>
+    <string name="searchBtn">Buscar</string>
+    <string name="editTextBox">Ingresa una palabra.</string>
+</resources>

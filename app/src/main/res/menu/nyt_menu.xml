@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/nyt_add"
+        app:showAsAction="always"
+        android:title="item" />
+
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/nyt_list"
+        app:showAsAction="always"
+        android:title="item" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/nyt_delete"
+        app:showAsAction="always"
+        android:title="item" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/nyt_help"
+        app:showAsAction="never"
+        android:title="Help" />
+
+
+
+</menu>

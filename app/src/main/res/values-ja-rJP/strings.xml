@@ -4,4 +4,7 @@
     <string name="weather_city_search">都市を検索</string>
     <string name="weather_save">結果を保存</string>
     <string name="weather_title">気象情報</string>
+    <string name="nyt_title" translatable="false">New York Times App</string>
+    <string name="searchBtn" translatable="false">Buscar</string>
+    <string name="editTextBox" translatable="false">Ingresa una palabra.</string>
 </resources>

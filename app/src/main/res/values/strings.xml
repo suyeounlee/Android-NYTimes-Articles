@@ -1,13 +1,11 @@
 <resources>
     <string name="app_name">Group_Project</string>
-<<<<<<< HEAD
-    <string name="api_key">ktsLppXjo1vaophZGkHslluJ19wUkI6m</string>
-    <string name="hinttext">Enter a keyword</string>
-    <string name="button">Search</string>
-=======
-    <string name="weather_title">Weather App</string>
-    <string name="weather_city_search">Search</string>
-    <string name="weather_save">Save Search Record</string>
+    <string name="weather_title" translatable="false">Weather App</string>
+    <string name="weather_city_search" translatable="false">Search</string>
+    <string name="weather_save" translatable="false">Save Search Record</string>
 
->>>>>>> ad0713910b88080298dfbbb051110d5b89edc97d
+    <string name="nyt_title">New York Times App</string>
+    <string name="editTextBox">Enter a keyword.</string>
+    <string name="searchBtn">Search</string>
+
 </resources>
