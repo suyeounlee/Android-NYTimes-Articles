@@ -1,6 +1,7 @@
 package algonquin.cst2335.group_project.nytimes;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +45,9 @@ import algonquin.cst2335.group_project.R;
 
 import algonquin.cst2335.group_project.databinding.ActivityNytimesBinding;
 import algonquin.cst2335.group_project.databinding.NewyorkArticleBinding;
+import algonquin.cst2335.group_project.kitten.KittenActivity;
+import algonquin.cst2335.group_project.nasa.NasaActivity;
+import algonquin.cst2335.group_project.weather.WeatherActivity;
 
 
 /**
@@ -163,6 +167,23 @@ public class NYTimesActivity extends AppCompatActivity {
                                 "(4) If you want to delete a saved article, click the garbage icon in the toolbar.")
                         .create().show();
                 break;
+
+
+            case R.id.weather:
+
+                startActivity(new Intent(NYTimesActivity.this, WeatherActivity.class));
+                break;
+
+            case R.id.kitten:
+
+                startActivity(new Intent(NYTimesActivity.this, KittenActivity.class));
+                break;
+
+            case R.id.nasa:
+
+                startActivity(new Intent(NYTimesActivity.this, NasaActivity.class));
+                break;
+
         }
 
         return true;

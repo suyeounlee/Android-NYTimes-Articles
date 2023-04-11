@@ -26,6 +26,19 @@
         app:showAsAction="never"
         android:title="Help" />
 
+    <item
+        android:id="@+id/weather"
+        app:showAsAction="never"
+        android:title="weather" />
 
+    <item
+        android:id="@+id/kitten"
+        app:showAsAction="never"
+        android:title="kitten" />
+
+    <item
+        android:id="@+id/nasa"
+        app:showAsAction="never"
+        android:title="nasa" />
 
 </menu>
