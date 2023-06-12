@@ -10,56 +10,25 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/nasa_app"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#0D00CC"
-        android:text="NASA MARS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/kitten_app"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="30dp"
-        android:backgroundTint="#BC9300"
-        android:text="Kitten"
-        app:layout_constraintBottom_toBottomOf="@+id/nasa_app"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nasa_app"
-        app:layout_constraintTop_toTopOf="@+id/nasa_app" />
-
-    <Button
         android:id="@+id/nytime_app"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="40dp"
         android:backgroundTint="#1AAA00"
         android:text="New York Times"
-        app:layout_constraintStart_toStartOf="@+id/nasa_app"
-        app:layout_constraintTop_toBottomOf="@+id/nasa_app" />
-
-    <Button
-        android:id="@+id/weather_app"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#BD0000"
-        android:text="Weather"
-        app:layout_constraintStart_toStartOf="@+id/kitten_app"
-        app:layout_constraintTop_toBottomOf="@+id/kitten_app" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Group Project"
-        android:textSize="45sp"
+        android:layout_width="290dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="84dp"
+        android:text="Suyeoun's Project"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

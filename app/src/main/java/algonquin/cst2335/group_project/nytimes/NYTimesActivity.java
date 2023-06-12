@@ -45,10 +45,6 @@ import algonquin.cst2335.group_project.R;
 
 import algonquin.cst2335.group_project.databinding.ActivityNytimesBinding;
 import algonquin.cst2335.group_project.databinding.NewyorkArticleBinding;
-import algonquin.cst2335.group_project.kitten.KittenActivity;
-import algonquin.cst2335.group_project.nasa.NasaActivity;
-import algonquin.cst2335.group_project.weather.WeatherActivity;
-
 
 /**
  * NYTimesActivity is the main class responsible for managing the NY Times article search and
@@ -166,22 +162,6 @@ public class NYTimesActivity extends AppCompatActivity {
                                 "(3) Click on the article you are interested in to view more details and add it to your list.\n" +
                                 "(4) If you want to delete a saved article, click the garbage icon in the toolbar.")
                         .create().show();
-                break;
-
-
-            case R.id.weather:
-
-                startActivity(new Intent(NYTimesActivity.this, WeatherActivity.class));
-                break;
-
-            case R.id.kitten:
-
-                startActivity(new Intent(NYTimesActivity.this, KittenActivity.class));
-                break;
-
-            case R.id.nasa:
-
-                startActivity(new Intent(NYTimesActivity.this, NasaActivity.class));
                 break;
 
         }
