@@ -14,11 +14,12 @@ Adding the article to the list using built-in database SQLite in Android Studio.
 ![3  adding_to_list](https://github.com/suyeounlee/Android-NYTimes-Articles/assets/102848080/74cf6a7d-b55f-48e0-9c57-c7413e598de3)
 
 Data saved in the list successfully.
+
 ![4  added_list](https://github.com/suyeounlee/Android-NYTimes-Articles/assets/102848080/6a8d3203-d94b-45dd-98bd-11823136d1d0)
 
 Deleting the article from the list.
 
-![5  deleting](https://github.com/suyeounlee/Android-NYTimes
+![5  deleting](https://github.com/suyeounlee/Android-NYTimes-Articles/assets/102848080/32d7f862-fd63-4fd5-b44a-582dabf817b2)
 
 Article details(fragment).
 
